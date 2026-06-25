@@ -809,9 +809,6 @@ def section_qualite(df_raw_shape: tuple, rapport: dict, df: pd.DataFrame):
     desc = df[num_cols].describe().round(2).T
     desc.index.name = "Métrique"
     st.dataframe(desc, use_container_width=True)
-        desc.style.background_gradient(cmap="Blues", axis=1).format("{:.2f}"),
-        use_container_width=True
-    )
 
     # Box plots outliers
     st.markdown("#### 📦 Détection d'Outliers (Box Plots)")
