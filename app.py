@@ -807,8 +807,8 @@ def section_qualite(df_raw_shape: tuple, rapport: dict, df: pd.DataFrame):
         "cout_total_usd", "nb_incidents", "mttr_minutes", "cpu_pct", "ram_pct"
     ]
     desc = df[num_cols].describe().round(2).T
-desc.index.name = "Métrique"
-st.dataframe(desc, use_container_width=True)
+    desc.index.name = "Métrique"
+    st.dataframe(desc, use_container_width=True)
         desc.style.background_gradient(cmap="Blues", axis=1).format("{:.2f}"),
         use_container_width=True
     )
